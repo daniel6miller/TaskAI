@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>Task AI</header>
+
+    <!-- Available Tasks -->
+    <div class="container">
+        <div class="columns">
+            <div class="column column-left">
+                <h2>Available Tasks:</h2>
+                <ul id="taskList">
+                    <!-- Tasks will be dynamically loaded here -->
+                </ul>
+            </div>
+
+            <div class="column column-right">
+                <h2>Record Task:</h2>
+                <form id="taskForm">
+                    <label for="taskName">Task Name:</label>
+                    <input type="text" id="taskName" name="task_name">
+                    <!-- Change the type to 'submit' to enable form submission -->
+                    <button type="submit" id="recordButton">Record Task</button>
+                    <button type="button" id="stopButton" style="display: none;">Stop Recording</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
